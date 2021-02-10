@@ -33,7 +33,7 @@ export default class UserList extends Component {
 
   render() {
     var users = this.state.content;
-    const rows = (users) ? users.map(row => <tr>
+    const rows = (users) ? users.map(row => <tr key={row.userName}>
                 <td>{row.userName}</td>
                 <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
                 <td>{row.email}</td>
@@ -47,7 +47,7 @@ export default class UserList extends Component {
 
           <h3>All Registered users</h3>
 
-          <table class="table table-dark table-striped">
+          <table className="table table-dark table-striped">
             <thead>
               <tr>
                 <th>User Name</th>

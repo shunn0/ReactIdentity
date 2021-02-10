@@ -33,7 +33,7 @@ export default class PermissionList extends Component {
 
   render() {
     var roles = this.state.content;
-    const rows = (roles) ? roles.map(row => <tr>
+    const rows = (roles) ? roles.map(row => <tr key={row.permissionCode}>
                                       <td>{row.permissionCode}</td>
                                       <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
                                       <td>{row.description}</td>
@@ -45,7 +45,7 @@ export default class PermissionList extends Component {
 
           <h3>All available permissions</h3>
 
-          <table class="table table-dark table-striped">
+          <table className="table table-dark table-striped">
             <thead>
               <tr>
                 <th>Permission Code</th>

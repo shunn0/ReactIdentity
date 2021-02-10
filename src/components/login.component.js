@@ -114,7 +114,6 @@ export default class Login extends Component {
                 className="form-control"
                 name="password"
                 placeholder="Password"
-                pl
                 value={this.state.password}
                 onChange={this.onChangePassword}
                 validations={[required]}
